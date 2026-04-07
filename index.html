@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="calculator-card" aria-label="Advanced calculator">
+        <header class="card-header">
+          <div>
+            <h1>Calculator</h1>
+            <p>Keyboard-ready with expression history</p>
+          </div>
+          <div class="header-controls">
+            <button class="chip" id="angleToggle" data-angle="deg">DEG</button>
+            <button class="chip" id="themeToggle">Theme</button>
+          </div>
+        </header>
+
+        <section class="display" aria-live="polite">
+          <p id="preview" class="preview">&nbsp;</p>
+          <input
+            type="text"
+            id="inputBox"
+            placeholder="0"
+            readonly
+            aria-label="Calculator input"
+          />
+        </section>
+
+        <section class="button-grid" aria-label="Calculator keypad">
+          <button class="button utility" data-action="clear">AC</button>
+          <button class="button utility" data-action="delete">DEL</button>
+          <button class="button utility" data-action="toggle-sign">+/-</button>
+          <button class="button operator" data-value="%">%</button>
+          <button class="button operator" data-value="/">/</button>
+
+          <button class="button function" data-value="sin(">sin</button>
+          <button class="button function" data-value="cos(">cos</button>
+          <button class="button function" data-value="tan(">tan</button>
+          <button class="button function" data-value="log(">log</button>
+          <button class="button function" data-value="ln(">ln</button>
+
+          <button class="button function" data-value="(">(</button>
+          <button class="button function" data-value=")">)</button>
+          <button class="button function" data-value="sqrt(">sqrt</button>
+          <button class="button function" data-value="^2">x^2</button>
+          <button class="button operator" data-value="*">*</button>
+
+          <button class="button function" data-value="pi">pi</button>
+          <button class="button function" data-value="e">e</button>
+          <button class="button function" data-value="^">x^y</button>
+          <button class="button function" data-action="insert-ans">Ans</button>
+          <button class="button operator" data-value="-">-</button>
+
+          <button class="button" data-value="7">7</button>
+          <button class="button" data-value="8">8</button>
+          <button class="button" data-value="9">9</button>
+          <button class="button" data-value=".">.</button>
+          <button class="button operator" data-value="+">+</button>
+
+          <button class="button" data-value="4">4</button>
+          <button class="button" data-value="5">5</button>
+          <button class="button" data-value="6">6</button>
+          <button class="button" data-value="1">1</button>
+          <button class="button" data-value="2">2</button>
+
+          <button class="button" data-value="3">3</button>
+          <button class="button span-2" data-value="0">0</button>
+          <button class="button" data-value="00">00</button>
+          <button class="button equalBtn" data-action="calculate">=</button>
+
+        </section>
+
+        <section class="history" aria-label="Calculation history">
+          <div class="history-header">
+            <h2>History</h2>
+            <button class="history-clear" id="clearHistoryBtn">Clear</button>
+          </div>
+          <ul id="historyList"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
